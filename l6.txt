@@ -1,0 +1,40 @@
+Aim: To configure Static Routing on a network using routers, ensuring data packets are directed to 
+the correct destination networks via predefined paths. 
+Theoretical Description: Static routing is a routing technique in which a network administrator 
+manually adds routes to a routing table. Unlike dynamic routing protocols, static routing does 
+not adjust automatically to network topology changes. It is commonly used in small, simple 
+networks or where specific routes need to be enforced due to security or performance 
+requirements. 
+Algorithm: 
+1. 
+2. 
+3. 
+4. 
+5. 
+Network Setup: 
+o
+ Design the network topology with at least two routers, connected via serial or 
+Ethernet links, along with some end devices (PCs or switches) connected to each router. 
+Access Each Router's CLI: 
+o
+ Open the terminal on each router and switch to Privileged EXEC Mode using the 
+enable command. 
+Assign IP Addresses to Router Interfaces: 
+o
+ Configure IP addresses for the router interfaces that connect to each other and to 
+the local networks. 
+Define Static Routes: 
+o
+ For each network, define the next-hop router IP address (or exit interface) for 
+routing traffic. 
+Test Connectivity: 
+o
+ Use the ping and traceroute commands to verify that the devices in different 
+networks can communicate. 
+Output: 
+24 
+Computer Networks Lab (CSE3131) Lab Manual 
+Department of Computer Science & Engineering 
+Conclusion: In this experiment, we successfully configured Static Routing between two routers. 
+By defining static routes, we manually instructed each router on how to reach the other network. 
+This allowed communication between devices in different networks.
