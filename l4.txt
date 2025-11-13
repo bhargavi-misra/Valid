@@ -1,0 +1,82 @@
+Computer Networks Lab (CSE3131) Lab Manual 
+Department of Computer Science & Engineering 
+PROGRAM -4: 
+Aim: To configure Dynamic Host Configuration Protocol (DHCP) on a network device (such as a 
+router) to dynamically assign IP addresses to devices connected to the network and verify the correct 
+configuration. 
+Theoretical Description: 
+DHCP (Dynamic Host Configuration Protocol) is a network management protocol used to dynamically 
+assign IP addresses and other related network configuration information (like subnet mask, gateway, 
+DNS) to devices in a network. This eliminates the need for manually configuring each device with an IP 
+address. 
+A DHCP server assigns IP addresses from a predefined range or pool of IP addresses to devices 
+(clients) requesting an address. This system ensures efficient and automated distribution of IP 
+addresses, reducing the risk of IP conflicts. 
+The basic process of DHCP includes four steps: 
+1. 
+2. 
+3. 
+4. 
+client. 
+DHCP Discover: The client broadcasts a request to find a DHCP server. 
+DHCP Offer: The server responds with an IP address offer. 
+DHCP Request: The client requests the offered IP address. 
+DHCP Acknowledgment (ACK): The server confirms and assigns the IP address to the 
+Algorithm: 
+1. Network Setup: 
+a. In Packet Tracer (or physical setup), place a router (or DHCP server), a switch, and 
+several end devices (PCs, laptops). 
+b. Connect the router to the switch, and connect the end devices to the switch using 
+straight-through cables. 
+2. DHCP Configuration on the Router: 
+a. Access the router's CLI. 
+b. Enter global configuration mode and configure a DHCP pool with a range of IP 
+addresses. 
+18 
+Computer Networks Lab (CSE3131) Lab Manual 
+Department of Computer Science & Engineering 
+3. Exclude Specific IP Addresses (Optional): 
+a. If certain IPs (like the router itself) should not be assigned dynamically 
+4. IP Configuration on End Devices: 
+a. On the PCs connected to the network, go to the Desktop tab in Packet Tracer, open IP 
+Configuration, and select DHCP. 
+b. The PCs should automatically obtain an IP address from the DHCP server. 
+5. Verification: 
+a. On the router, use the following command to verify the leased IP addresses: 
+i. Router# show ip dhcp binding 
+Output: 
+1. PC IP Configuration (Automatically Assigned): 
+a. IP Address: 192.168.1.11 
+b. Subnet Mask: 255.255.255.0 
+c. Default Gateway: 192.168.1.1 
+d. DNS Server: 8.8.8.8 
+2. DHCP Binding Output (On Router): 
+a. IP address 
+Client-ID/Lease expiration Type 
+b. 192.168.1.11 0001.4a55.a3b7 
+c. 192.168.1.12 0002.4b67.fad9 
+3. DHCP Show Command Output: 
+a. Router# show ip dhcp binding 
+b. Router# show ip dhcp pool 
+c. Pool MY_POOL : 
+Automatic 
+Automatic 
+19 
+Computer Networks Lab (CSE3131) Lab Manual 
+Department of Computer Science & Engineering 
+d. Utilization: 2 addresses in use, 246 available 
+e. Subnet size: 256 
+Conclusion: In conclusion, DHCP is a technology that simplifies network setup by 
+automatically assigning IP addresses and network configurations to devices. While DHCP offers 
+convenience, it’s important to manage its security carefully. Issues such as IP address 
+exhaustion, and potential data access through DNS settings highlight the need for robust security 
+measures like firewalls and VPNs to protect networks from unauthorized access and disruptions. 
+DHCP remains essential for efficiently managing network connections while ensuring security 
+against potential risks. 
+Viva Questions: 
+1. What is the role of a DHCP server in a network? 
+2. Explain the DHCP Discover and DHCP Offer processes. 
+3. What is the significance of the default-router command in DHCP configuration? 
+4. Why would you use the ip dhcp excluded-address command in DHCP 
+configuration? 
+20 
