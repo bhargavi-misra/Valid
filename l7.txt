@@ -1,0 +1,42 @@
+Aim: To configure Routing Information Protocol (RIP) on a set of routers to enable dynamic routing 
+between multiple networks. 
+Theoretical Description: Routing Information Protocol (RIP) is a dynamic routing protocol 
+used in local and wide area networks. RIP is a distance-vector routing protocol that uses hop 
+count as the metric for path selection. RIP has two versions, RIPv1 and RIPv2, with some key 
+differences: 
+
+ 
+ RIPv1: A classful routing protocol that does not support subnet information and works without 
+sending subnet masks, making it unsuitable for Variable Length Subnet Masking (VLSM) or 
+Classless Inter-Domain Routing (CIDR). 
+RIPv2: A classless routing protocol that supports subnet masks and includes VLSM and CIDR 
+support. RIPv2 also supports authentication and multicast for route updates. 
+Algorithm: 
+1. Setup Network Topology: 
+o
+ Design a network with at least two or more routers connected via serial or Ethernet 
+links. Configure IP addresses on each router’s interface. 
+2. Enter Global Configuration Mode: 
+o
+ On each router, access the command-line interface (CLI) and switch to privileged 
+EXEC mode. 
+3. Enable RIP: 
+o
+ Enable RIP on each router and specify the version (RIPv1 or RIPv2). 
+4. Advertise Networks: 
+o
+ For each router, advertise the connected networks so RIP can propagate the routes 
+dynamically. 
+5. Verify Configuration: 
+o
+ Output: 
+Check that the routers have dynamically learned the routes from other routers using 
+the RIP protocol. 
+26 
+Computer Networks Lab (CSE3131) Lab Manual 
+Department of Computer Science & Engineering 
+Conclusion: In this experiment, we configured both RIPv1 and RIPv2. RIPv1 does not support 
+subnetting, which limits its usefulness in modern networks. RIPv2, however, is classless and 
+supports VLSM and CIDR, making it more flexible. By configuring RIP, we were able to 
+dynamically propagate routes between routers and verify communication between different 
+networks. 
