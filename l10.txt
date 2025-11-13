@@ -1,0 +1,49 @@
+Aim: To implement and analyze the Network Address Translation (NAT) protocol in a simulated 
+network environment to understand its configuration, operation, and troubleshooting techniques. 
+Theoretical Description: Network Address Translation (NAT) is a technique used in 
+networking to translate private (non-routable) IP addresses to a public (routable) IP address and 
+vice versa. NAT is crucial for conserving the limited number of public IP addresses and 
+enhancing security by hiding internal IP addresses from external networks. 
+Types of NAT: 
+1. Static NAT: A fixed mapping between a private IP and a public IP, allowing external devices 
+to access internal servers. 
+2. Dynamic NAT: Maps private IPs to a public IP from a defined pool. 
+3. PAT (Port Address Translation): Allows multiple devices on a local network to be mapped 
+to a single public IP address, differentiated by unique port numbers. 
+Key Concepts: 
+
+ 
+ 
+ NAT Inside: Refers to the internal network. 
+NAT Outside: Refers to the external network (internet). 
+Translation Table: Maintains the mapping between private and public IP addresses. 
+Algorithm: 
+1. Define Access List: 
+a. Create an access list to identify internal IPs that should be translated. 
+2. Configure NAT Pool (for Dynamic NAT): 
+a. Define a pool of public IP addresses for translation. 
+3. Specify Interfaces: 
+a. Configure the router interfaces as NAT inside or outside. 
+4. Associate Access List with NAT Configuration: 
+a. Link the access list to the NAT pool or define overload for PAT. 
+33 
+Computer Networks Lab (CSE3131) Lab Manual 
+Department of Computer Science & Engineering 
+5. Test Connectivity: 
+a. Check if devices can access external networks and whether NAT translations are 
+happening. 
+6. Troubleshoot if Necessary: 
+a. Use commands to check NAT translations and statistics to diagnose issues. 
+Output: 
+
+ 
+ 
+ Successful translation of private IP addresses to a public IP address. 
+Connectivity from devices on the private network to external networks. 
+Display of NAT translation table showing active mappings between internal and external 
+addresses. 
+Conclusion: 
+The implementation of NAT demonstrates its critical role in modern networking by enabling 
+multiple devices to share a single public IP address while providing security by masking internal 
+IP addresses. Understanding NAT configuration and troubleshooting enhances network 
+management skills, ensuring efficient operation and connectivity in various network scenarios.
