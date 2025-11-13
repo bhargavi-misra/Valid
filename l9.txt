@@ -1,0 +1,44 @@
+Aim: To configure VLAN (Virtual Local Area Network) on a switch and verify its functionality by 
+assigning ports to different VLANs. Additionally, troubleshoot VLAN-related issues to ensure proper 
+network segmentation. 
+Theoretical Description: VLAN (Virtual Local Area Network) is a logical grouping of devices 
+within a network that allows segmentation of a network into different broadcast domains. This 
+segmentation enhances security, improves network performance, and simplifies network 
+management by grouping devices logically instead of physically. 
+A VLAN operates at Layer 2 (Data Link Layer) of the OSI model, and each VLAN acts as a 
+separate network segment, even if the devices are connected to the same physical switch. Devices in 
+the same VLAN can communicate with each other, while devices in different VLANs require a 
+Layer 3 device (like a router) to communicate. 
+Common VLAN types: 
+
+ 
+ 
+ 
+ Default VLAN: All switch ports belong to VLAN 1 by default. 
+Data VLAN: Carries user-generated traffic (e.g., VLAN 10 for HR, VLAN 20 for Sales). 
+Voice VLAN: Carries voice traffic, typically prioritized over data traffic. 
+Management VLAN: Used for network management traffic (e.g., SSH, Telnet). 
+Algorithm: 
+1. Define Network Topology: 
+a. Identify the switch and end devices (PCs) that need to be assigned to different VLANs. 
+2. Access Switch: 
+a. Log into the switch and enter global configuration mode. 
+3. Create VLANs: 
+a. Create and name VLANs as per the network requirements. 
+4. Assign Ports to VLANs: 
+a. Assign specific switch ports to the desired VLANs. 
+30 
+Computer Networks Lab (CSE3131) Lab Manual 
+Department of Computer Science & Engineering 
+5. Configure Trunk Ports (Optional): 
+a. If multiple switches are connected, configure trunking on the switch-to-switch link to 
+allow traffic from multiple VLANs to pass through. 
+6. Verify VLAN Configuration: 
+a. Verify VLANs and ensure devices within the same VLAN can communicate. 
+7. Troubleshoot VLAN Issues: 
+a. Check the VLAN configuration for any misconfigured ports or VLAN assignments. 
+Output: 
+Conclusion: In this experiment, we successfully configured VLANs on a switch, segmented the 
+network into different broadcast domains, and tested communication between devices within the 
+same VLAN. We also learned to troubleshoot common VLAN issues such as misconfigured 
+ports and trunk links. 
