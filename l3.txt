@@ -1,0 +1,114 @@
+PROGRAM -2: 
+Aim: To understand and use various network utility commands such as PING, NETSTAT, 
+IPCONFIG, IFCONFIG, ARP, TRACE-ROUTE, NSLOOKUP, and PATHPING to monitor and 
+troubleshoot network configurations. 
+Theoretical Description: 
+Network utility commands are used to perform a variety of network-related operations. These 
+commands allow users to check network status, troubleshoot issues, and gather information about 
+devices and network routes. Here’s a brief description of each command: 
+
+ PING: Sends ICMP echo requests to a target IP address or hostname to verify connectivity. 
+NETSTAT: Displays active connections, listening ports, routing tables, and network statistics. 
+IPCONFIG (Windows) / IFCONFIG (Linux): Shows the IP configuration of network interfaces. 
+ARP: Displays the ARP table (mapping of IP addresses to MAC addresses) used in a network. 
+TRACE-ROUTE: Traces the route that packets take to reach a destination, displaying each hop. 
+NSLOOKUP: Queries DNS servers for IP addresses corresponding to domain names. 
+PATHPING: Combines PING and TRACE-ROUTE functionalities, showing packet loss and 
+latency over each hop. 
+Algorithm: For each command, the algorithm generally follows this pattern: 
+1. Open a Command Prompt (Windows) or Terminal (Linux). 
+2. Run the command with necessary parameters (e.g., IP address, hostname). 
+3. Observe the output for insights into network status or issues. 
+4. Interpret the results based on what the command outputs (e.g., latency for PING, route for TRACE- 
+ROUTE). 
+Source Code: 
+This section describes the syntax and examples for each network utility command: 
+1. PING (Test connectivity): 
+ping google.com 
+10 
+Computer Networks Lab (CSE3131) Lab Manual 
+Department of Computer Science & Engineering 
+ping 192.168.1.1 
+2. NETSTAT (View network connections): 
+netstat -a  
+netstat -r 
+netstat -e  
+(Shows all active connections) 
+(Displays routing table) 
+(Shows Ethernet statistics) 
+3. IPCONFIG (Windows) / IFCONFIG (Linux): 
+ipconfig 
+ifconfig 
+ipconfig /all 
+(Windows) 
+(Linux) 
+(Displays detailed info in Windows) 
+4. ARP (View ARP table): 
+arp -a 
+5. TRACE-ROUTE (Trace packet path to a destination): 
+tracert google.com 
+(Windows) 
+traceroute google.com (Linux) 
+6. NSLOOKUP (Query DNS): 
+nslookup google.com 
+7. PATHPING (Check route and latency): 
+pathping google.com 
+Output: 
+1. PING: 
+Reply from 142.250.72.238: bytes=32 time=25ms TTL=55 
+Reply from 142.250.72.238: bytes=32 time=26ms TTL=55 
+2. NETSTAT: 
+11 
+State 
+Computer Networks Lab (CSE3131) Lab Manual 
+Department of Computer Science & Engineering 
+Active Connections: 
+Proto Local Address 
+Foreign Address 
+TCP 192.168.1.10:49704 142.250.72.238:https  ESTABLISHED 
+3. IPCONFIG (Windows): 
+Ethernet adapter Local Area Connection: 
+IPv4 Address: 192.168.1.10 
+Subnet Mask: 255.255.255.0 
+Default Gateway: 192.168.1.1 
+4. IFCONFIG (Linux): 
+eth0 
+Link encap:Ethernet HWaddr 00:1C:C0:AE:B4:89 
+inet addr:192.168.1.10 Bcast:192.168.1.255 Mask:255.255.255.0 
+5. ARP: 
+Interface: 192.168.1.10 --- 0x6 
+Internet Address  
+192.168.1.1 
+6. TRACE-ROUTE: 
+Physical Address  
+00-14-22-01-23-45 
+Type 
+dynamic 
+Tracing route to google.com [142.250.72.238] 
+1 1 ms 1 ms 1 ms 192.168.1.1 
+2 15 ms 15 ms 14 ms 10.100.20.1 
+3 25 ms 26 ms 25 ms 142.250.72.238 
+7. NSLOOKUP: 
+Server: dns.google 
+Address: 8.8.8.8 
+12 
+Computer Networks Lab (CSE3131) Lab Manual 
+Department of Computer Science & Engineering 
+Name: google.com 
+Address: 142.250.72.238 
+8. PATHPING: 
+Tracing route to google.com [142.250.72.238] 
+Hop RTT Lost/Sent Address 
+1 <1ms 0/100 192.168.1.1 
+2 20ms 0/100 10.100.20.1 
+Conclusion: In this experiment, we explored different network utility commands that allow us to 
+check network configurations, trace routes, and troubleshoot network issues. Each command serves 
+a specific purpose, ranging from checking basic connectivity (PING) to analyzing network traffic 
+(NETSTAT) and route discovery (TRACE-ROUTE, PATHPING). These tools are vital for network 
+administrators to ensure proper network functionality and identify potential issues. 
+Viva Questions: 
+1. What is the function of the PING command? 
+2. Explain the difference between IPCONFIG and IFCONFIG. 
+3. How does the TRACE-ROUTE command help in identifying network issues? 
+4. What does the NSLOOKUP command do? 
+13 
