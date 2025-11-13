@@ -1,0 +1,30 @@
+Aim: To configure Open Shortest Path First (OSPF) routing protocol on multiple routers in a 
+network and troubleshoot common OSPF configuration issues. 
+Theoretical Description: OSPF (Open Shortest Path First) is a link-state routing protocol used 
+in Internet Protocol (IP) networks to find the best path for data to travel. OSPF is more efficient 
+and scalable compared to distance-vector routing protocols like RIP. It is widely used in both 
+small and large enterprise networks and is part of the Interior Gateway Protocol (IGP) suite. 
+Algorithm: 
+1. Define Network Topology: 
+a. Create a network with at least two routers connected via serial or Ethernet links. Each 
+router should be connected to end devices like PCs or switches. 
+2. Configure IP Addresses: 
+a. Assign IP addresses to all router interfaces connecting them to each other and to local 
+networks. 
+3. Enable OSPF: 
+a. On each router, enable OSPF, assign a process ID, and specify the OSPF area (typically 
+Area 0). 
+4. Advertise Networks: 
+a. Use the network command to define the networks that OSPF will advertise to other 
+routers. 
+5. Verify and Troubleshoot: 
+a. Check OSPF neighbors, routing tables, and troubleshoot any connectivity issues. 
+Output: 
+28 
+Computer Networks Lab (CSE3131) Lab Manual 
+Department of Computer Science & Engineering 
+Conclusion: In this experiment, we successfully configured OSPF on multiple routers and 
+dynamically propagated routes between them. OSPF's link-state nature ensures fast convergence 
+and efficient path selection based on the cost metric. Additionally, we troubleshooted common 
+OSPF configuration errors, such as incorrect network statements, mismatched OSPF timers, and 
+neighbor adjacency issues.
