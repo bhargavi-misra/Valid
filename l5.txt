@@ -1,0 +1,76 @@
+Aim: To understand the modes of operation in a Router and explore basic Router and Switch 
+commands for configuring and managing network devices. 
+Theoretical Description: 
+A Router operates in various modes, each allowing different levels of configuration and command 
+execution. The most common modes in a router are: 
+1. User EXEC Mode: This is the initial mode when accessing the router, which has limited 
+functionality, mainly for viewing basic information. 
+o
+ Prompt: Router> 
+2. Privileged EXEC Mode: Provides access to all the show commands, debugging, and basic 
+device management commands. You can also enter global configuration mode from here. 
+o
+ o
+ Prompt: Router# 
+Command to enter: enable 
+3. Global Configuration Mode: Used to make system-wide configurations. You can configure 
+interfaces, routing protocols, and other features. 
+o
+ o
+ Prompt: Router(config)# 
+Command to enter: configure terminal 
+4. Interface Configuration Mode: Used to configure the individual interfaces (ports) of the router. 
+o
+ o
+ Prompt: Router(config-if)# 
+Command to enter: interface [type/number] (e.g., interface GigabitEthernet0/0) 
+Switches also have a similar hierarchy of command modes and allow management through 
+VLANs, port configurations, etc. 
+Algorithm: 
+1. Access the Router or Switch: 
+a. Open a terminal or console session to the Router/Switch. 
+2. Switch to Privileged EXEC Mode: 
+21 
+Computer Networks Lab (CSE3131) Lab Manual 
+Department of Computer Science & Engineering 
+a. Enter the enable command to switch from user mode to privileged EXEC mode. 
+3. Enter Global Configuration Mode: 
+a. Use the configure terminal command to enter global configuration mode. 
+4. Configure Interfaces (For Routers): 
+a. Use interface commands to configure IP addresses, enable/disable interfaces, etc. 
+b. Example: interface GigabitEthernet0/0 
+5. View Status and Information: 
+a. Use commands like show ip interface brief, show running-config, etc., to view current
+ configurations. 
+6. Basic Switch Commands: 
+a. Set the hostname, password, and manage VLANs. 
+Output: 
+1. Router Hostname Configuration: 
+MyRouter(config)# hostname MyRouter 
+MyRouter# 
+2. Interface IP Configuration: 
+MyRouter(config-if)# ip address 192.168.1.1 255.255.255.0 
+MyRouter(config-if)# no shutdown 
+3. Switch VLAN Configuration: 
+MySwitch# show vlan brief 
+VLAN Name 
+Status Ports 
+22 
+Computer Networks Lab (CSE3131) Lab Manual 
+Department of Computer Science & Engineering 
+10  Sales 
+active Fa0/1 
+4. Interface Status on Router: 
+MyRouter# show ip interface brief 
+Interface 
+IP-Address  OK? Method Status 
+GigabitEthernet0/0  192.168.1.1  YES manual up  
+Protocol 
+up 
+Conclusion: In this experiment, we explored the different modes of a router and basic switch 
+commands. We configured a router's hostname, IP address, and interfaces, and also set up 
+VLANs on a switch. 
+Viva Questions: 
+1. What is the difference between User EXEC Mode and Privileged EXEC Mode? 
+2. Why do we use the no shutdown command after configuring an interface? 
+3. What is the purpose of setting a default gateway on a router
